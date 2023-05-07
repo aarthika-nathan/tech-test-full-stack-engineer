@@ -30,3 +30,9 @@
     transform: rotate(360deg);
   }
 }
+
+
+.fill-tab {
+  border-radius: 5;
+  border-color: #282c34;
+}

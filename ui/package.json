@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "react": "^16.7.0",
+    "react-bootstrap": "^2.7.4",
     "react-dom": "^16.7.0",
+    "react-icons": "^4.8.0",
     "react-scripts": "2.1.2"
   },
   "scripts": {

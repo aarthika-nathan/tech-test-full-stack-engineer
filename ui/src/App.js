@@ -1,23 +1,21 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Col from "react-bootstrap/Col";
+import ListViewPage from "./pages/ListViewPage";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Container fluid className="m-3">
+          <Row>
+            <Col>
+              <ListViewPage />
+            </Col>
+          </Row>
+        </Container>
       </div>
     );
   }

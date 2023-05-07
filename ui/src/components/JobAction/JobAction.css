@@ -1,0 +1,13 @@
+.custom-primary-button {
+    background-color: rgb(247,135,16) !important;
+    border-color: rgb(247,135,16) !important;
+    border-radius: 0;
+}
+
+.custom-secondary-button {
+    background-color: rgb(216,209,202) !important;
+    color: darkgrey;
+    border-color: rgb(216,209,202) !important;
+    border-radius: 0;
+    width: 100;
+}

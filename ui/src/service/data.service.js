@@ -8,9 +8,11 @@ const REQUEST_METHOD ={
   PUT: 'PUT'
 }
 
+const DATA_SERVICE_URL = process.env.REACT_APP_DATA_SERVICE_URL;
+
 export const getInvitedJobs = async () => {
   try {
-    const response = await fetch(`http://localhost:8080/jobs?status=new`, {
+    const response = await fetch(`${DATA_SERVICE_URL}/jobs?status=new`, {
       method: REQUEST_METHOD.GET,
       headers: requestHeaders,
     });
@@ -23,7 +25,7 @@ export const getInvitedJobs = async () => {
 
 export const getAcceptedJobs = async () => {
   try {
-    const response = await fetch(`http://localhost:8080/jobs?status=accepted`, {
+    const response = await fetch(`${DATA_SERVICE_URL}/jobs?status=accepted`, {
       method: REQUEST_METHOD.GET,
       headers: requestHeaders,
     });
@@ -36,7 +38,7 @@ export const getAcceptedJobs = async () => {
 
 export const acceptJob = async (id) => {
   try {
-    const response = await fetch(`http://localhost:8080/jobs/${id}/accept`, {
+    const response = await fetch(`${DATA_SERVICE_URL}/jobs/${id}/accept`, {
       method: REQUEST_METHOD.PUT,
       headers: requestHeaders,
     });
@@ -48,7 +50,7 @@ export const acceptJob = async (id) => {
 
 export const declineJob = async (id) => {
   try {
-    const response = await fetch(`http://localhost:8080/jobs/${id}/decline`, {
+    const response = await fetch(`${DATA_SERVICE_URL}/jobs/${id}/decline`, {
       method: REQUEST_METHOD.PUT,
       headers: requestHeaders,
     });

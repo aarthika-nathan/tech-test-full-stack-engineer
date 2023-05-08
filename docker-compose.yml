@@ -5,6 +5,7 @@ services:
     entrypoint: ["npm", "start"]
     environment:
       NODE_ENV: development
+      REACT_APP_DATA_SERVICE_URL: http://localhost:8080
     image: node:10.15-alpine
     ports:
       - "3000:3000"

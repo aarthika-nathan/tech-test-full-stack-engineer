@@ -13,7 +13,6 @@ import "./ListViewPage.css";
 
 function ListViewPage() {
   const [isLoading, setIsLoading] = useState(true);
-  const [rerender, setRerender] = useState(false);
   const [acceptedJobs, setAcceptedJobs] = useState([]);
   const [invitedJobs, setInvitedJobs] = useState([]);
 

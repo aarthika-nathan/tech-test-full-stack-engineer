@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/:id/accept", async (req, res) => {
+router.put("/:id/accept", async (req, res) => {
   try {
     const job = await jobsService.updateJobAccepted(req.params.id);
     res.send(JSON.stringify(job, null, 2));
@@ -23,7 +23,7 @@ router.post("/:id/accept", async (req, res) => {
   }
 });
 
-router.post("/:id/decline", async (req, res) => {
+router.put("/:id/decline", async (req, res) => {
   try {
     const job = await jobsService.updateJobDeclined(req.params.id);
     res.send(JSON.stringify(job, null, 2));

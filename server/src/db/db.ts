@@ -1,11 +1,11 @@
 import mysql = require('mysql');
 
 let mySqlConfigs : mysql.PoolConfig = {
-  host: "database",
-  port: 3306,
-  user: "root",
-  password: "hipages",
-  database: "hipages",
+  host: process.env.ENV_DB_HOST,
+  port: process.env.ENV_DB_PORT,
+  user: process.env.ENV_DB_USER,
+  password: process.env.ENV_DB_PWD,
+  database: process.env.ENV_DATABASE,
 };
 
 let connection = mysql.createPool(mySqlConfigs);

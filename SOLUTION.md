@@ -31,8 +31,6 @@ Telephone and email text is implemented as links to initiate the call or to send
 
 Remove the hard coded configurations. The configurations could be made as environment variables or to be fetched from secure portal like AWS Secrets Manager.
 
-
-
 ## Clarifications Required
 
 In the accepted tabs, the circle components are in different colors, was this to show the accepted and declined jobs in the view. I have only added a single color circle assuming we should list down the accepted jobs.
@@ -43,11 +41,13 @@ In the accepted tabs, the circle components are in different colors, was this to
 
 * Show an error page when there is a failure in fetching the data 
 
-* Improve the test cases for the backend and the frontend
+* Add more test cases and improve the test cases for the backend and the frontend. Only added TDD for the two test cases in frontend due to time restrictions. (Eg: Contact, Description components)
 
 * Proper a constant naming style for folders and files
 
 * Add validations to check the props are not null or undefined.
 
 * Instead of using console log to print the error, show the error page or error banner for any failures
+
+* Integrate with a logger to log the messages to a file or to send them to a log server, rather than using console logs in backend
 

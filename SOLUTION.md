@@ -41,6 +41,7 @@ Improve the test cases for the backend and the frontend
 
 Proper a constant naming style for folders and files
 
+Add validations to check the props are not null or undefined.
 
 
 

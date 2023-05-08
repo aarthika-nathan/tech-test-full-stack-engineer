@@ -8,7 +8,11 @@ function JobAction({ price, onAccept, onDecline }) {
   return (
     <Row xs="auto" className="m-1">
       <Col>
-        <Button size="md" onClick={onAccept} className="custom-primary-button">
+        <Button
+          size="md"
+          onClick={onAccept}
+          className="custom-primary-button shadow"
+        >
           Accept
         </Button>
       </Col>
@@ -16,12 +20,15 @@ function JobAction({ price, onAccept, onDecline }) {
         <Button
           size="md"
           onClick={onDecline}
-          className="custom-secondary-button"
+          className="custom-secondary-button shadow"
         >
           Decline
         </Button>
       </Col>
-      <Col className="p-2"><span style={{fontWeight: 'bold'}}>${price.toFixed(2)}</span> Lead Invitation</Col>
+      <Col className="p-2">
+        <span style={{ fontWeight: "bold" }}>${price.toFixed(2)}</span> Lead
+        Invitation
+      </Col>
     </Row>
   );
 }

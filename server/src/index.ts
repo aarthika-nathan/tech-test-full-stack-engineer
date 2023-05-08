@@ -7,7 +7,7 @@ const server = express();
 const port = 8080;
 
 server.use(cors());
-server.use('/', routes);
+server.use('/jobs', routes);
 
 server.listen(port, () => {
     console.log(`Server is listening at http://localhost:${port}`);

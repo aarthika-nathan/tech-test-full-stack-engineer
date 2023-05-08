@@ -5,13 +5,15 @@ import { BsTelephone, BsEnvelope } from "react-icons/bs";
 import './Contact.css';
 
 function Contact({telephone, email}) {
+  const emailLink = `mailto:${email}`;
+  const teleLink = `tel::${telephone}`;
   return (
     <Row>
       <Col xs="auto">
-        <BsTelephone /> <span className="contact-detail"> {telephone}</span>
+        <BsTelephone /><a href={teleLink} className="contact-detail"> {telephone}</a>
       </Col>
       <Col>
-        <BsEnvelope /><span className="contact-detail"> {email}</span>
+        <BsEnvelope /><a href={emailLink} className="contact-detail"> {email}</a>
       </Col>
     </Row>
   );

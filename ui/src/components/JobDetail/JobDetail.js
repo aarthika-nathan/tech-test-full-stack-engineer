@@ -12,7 +12,7 @@ function JobDetail ({id, location, postcode, jobType, price}) {
             <Col>Job ID: {id}</Col>
             {price && <Col>${price.toFixed(2)} Lead Invitation</Col>}
         </Row>
-    )
+    );
 }
 
 export default JobDetail;

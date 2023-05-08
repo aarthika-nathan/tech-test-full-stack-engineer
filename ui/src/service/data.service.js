@@ -1,6 +1,6 @@
 export const getInvitedJobs = async () => {
   try {
-    const response = await fetch(`http://localhost:8080?status=new`, {
+    const response = await fetch(`http://localhost:8080/jobs?status=new`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -16,7 +16,7 @@ export const getInvitedJobs = async () => {
 
 export const getAcceptedJobs = async () => {
   try {
-    const response = await fetch(`http://localhost:8080?status=accepted`, {
+    const response = await fetch(`http://localhost:8080/jobs?status=accepted`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -32,14 +32,13 @@ export const getAcceptedJobs = async () => {
 
 export const acceptJob = async (id) => {
   try {
-    const response = await fetch(`http://localhost:8080/${id}/accept`, {
+    const response = await fetch(`http://localhost:8080/jobs/${id}/accept`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
     });
-
     return await response.json();
   } catch (error) {
     console.log(error);
@@ -48,7 +47,7 @@ export const acceptJob = async (id) => {
 
 export const declineJob = async (id) => {
   try {
-    const response = await fetch(`http://localhost:8080/${id}/decline`, {
+    const response = await fetch(`http://localhost:8080/jobs/${id}/decline`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

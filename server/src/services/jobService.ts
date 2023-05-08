@@ -11,33 +11,40 @@ const getJobs = (type) => {
     case JobStatus.NEW:
       return getJobsByStatus(JobStatus.NEW);
     case JobStatus.ACCEPTED:
-      return getJobsByStatus(JobStatus.ACCEPTED);;
+      return getJobsByStatus(JobStatus.ACCEPTED);
     case JobStatus.DECLINED:
-      return getJobsByStatus(JobStatus.DECLINED);;
+      return getJobsByStatus(JobStatus.DECLINED);
     default:
-      throw new Error("invlaid type");
+      return getAllJobs();
   }
 };
 
+const getAllJobs = async () => {
+  console.log(`fetching all jobs`);
+  const jobList = await jobs.findAllWithCategoryAndSuburb();
+  return jobList;
+};
 
-const getJobsByStatus = (status) => {
-    console.log(`fetching jobs based on status ${status}`);
-    const jobList = jobs.findAllWithCategoryAndSuburb(status);
-    return jobList;
-}
+const getJobsByStatus = async (status) => {
+  console.log(`fetching jobs based on status ${status}`);
+  let jobList = await jobs.findAllWithCategoryAndSuburbByStatus(status);
+  return jobList;
+};
 
-const updateJobAccepted = (id) => {
-    const jobList = jobs.updateJobStatus(id, JobStatus.ACCEPTED);
-    return jobList;
-}
+const updateJobAccepted = async (id) => {
+  console.log(`updating job ${id} as accepted`);
+  const acceptedJob = await jobs.updateJobStatus(id, JobStatus.ACCEPTED);
+  return acceptedJob;
+};
 
-const updateJobDeclined = (id) => {
-    const jobList = jobs.updateJobStatus(id, JobStatus.DECLINED);
-    return jobList;
-}
+const updateJobDeclined = async (id) => {
+  console.log(`updating job ${id} as declined`);
+  const jobList =  await jobs.updateJobStatus(id, JobStatus.DECLINED);
+  return jobList;
+};
 
 module.exports = {
   updateJobAccepted,
   updateJobDeclined,
-  getJobs
-}
+  getJobs,
+};

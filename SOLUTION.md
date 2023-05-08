@@ -6,10 +6,10 @@ Your Solution Documentation
 Requires to expose three APIs to access the data and for the operations accepting a job and declining a job. The API spec is as follows:
 
 Retrieving Jobs:
+
     GET /jobs                       : Retrieves all the jobs
     GET /jobs?status=new            : Retrieves all the jobs where the status is new
     GET /jobs?status=accepted       : Retrieves all the jobs where the status is accepted
-
     POST /jobs/:id/accept           : Update the status of the job as accepted
     POST /jobs/:id/decline          : Update the status of the job as declined
 
@@ -51,3 +51,4 @@ In the accepted tabs, the circle components are in different colors, was this to
 
 * Integrate with a logger to log the messages to a file or to send them to a log server, rather than using console logs in backend
 
+* Implement a proper error handling mechanism in the router for backend.

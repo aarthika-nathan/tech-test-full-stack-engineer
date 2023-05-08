@@ -29,7 +29,7 @@ There are multiple components created to reuse them in creating the card views f
 
 Telephone and email text is implemented as links to initiate the call or to send an email when clicking the text.
 
-Remove the hard coded configurations. The configurations could be made as environment variables or to be fetched from secure portal like AWS Secrets Manager.
+The configurations were fetched as environment variables.
 
 ## Clarifications Required
 

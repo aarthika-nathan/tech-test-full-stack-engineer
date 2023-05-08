@@ -10,8 +10,8 @@ Retrieving Jobs:
     GET /jobs                       : Retrieves all the jobs
     GET /jobs?status=new            : Retrieves all the jobs where the status is new
     GET /jobs?status=accepted       : Retrieves all the jobs where the status is accepted
-    POST /jobs/:id/accept           : Update the status of the job as accepted
-    POST /jobs/:id/decline          : Update the status of the job as declined
+    PUT /jobs/:id/accept           : Update the status of the job as accepted
+    PUT /jobs/:id/decline          : Update the status of the job as declined
 
 Mysql Db connection is required to query the data. Used the library 'mysql'.
 

@@ -21,6 +21,7 @@ Updated the versioning of the library used to add Jest dependency, since the Typ
 
 Remove the hard coded configurations and updated them as environment variables.
 
+
 ## Frontend
 
 Used the React Bootstrap components and the React Bootstrap Icons for the implementation.
@@ -31,9 +32,11 @@ Telephone and email text is implemented as links to initiate the call or to send
 
 The configurations were fetched as environment variables.
 
+
 ## Clarifications Required
 
 In the accepted tabs, the circle components are in different colors, was this to show the accepted and declined jobs in the view. I have only added a single color circle assuming we should list down the accepted jobs.
+
 
 ## Things Which Can be Done
 

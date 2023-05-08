@@ -55,3 +55,7 @@ In the accepted tabs, the circle components are in different colors, was this to
 * Integrate with a logger to log the messages to a file or to send them to a log server, rather than using console logs in backend
 
 * Implement a proper error handling mechanism in the router for backend.
+
+* Typescript used for backend could be implemented properly by validating the types for each variables. 
+
+* Could have updated the libraries to the current version before starting the implementation, which would have avoided few dependency issues in the libraries.

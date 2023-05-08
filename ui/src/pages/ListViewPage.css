@@ -15,5 +15,6 @@
 }
 
 .nav-tabs .nav-link:hover{
-    color: gray
+    color: gray;
+    border-radius: 0 !important;
 }
